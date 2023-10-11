@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>  
+    
+<div class="display">
+    <div class="display-randomskin">
+
+    </div>
+
+    <div class="welcome">
+        <h4>Welcome!</h4>
+        
+        <p>Select the skins you would like to include and press the button to randomize!</p>
+    </div>
+        
+    <button id="randomize">Randomize</button>
+    
+</div>
+    
+<div class="skin-cards">
+        
+    <% skins.forEach((skin) => { %>
+        
+        <div class="skin">
+                <img src="<%= skin.image %>" alt="">
+                <h4 class="skin-title"><%= skin.title %></h4>  
+                <input type="checkbox" class="checkbox">    
+        </div>
+        
+        <% }) %>
+   
+    </div> 
+    
+
+
